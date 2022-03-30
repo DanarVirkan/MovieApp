@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/trending">
+
+    <fragment
+        android:id="@+id/trending"
+        android:name="com.moviedb.trending.TrendingFragment"
+        tools:layout="@layout/fragment_trending" />
+
+    <fragment
+        android:id="@+id/explore"
+        android:name="com.moviedb.explore.ExploreFragment"
+        tools:layout="@layout/fragment_explore" />
+
+    <include-dynamic
+        android:id="@+id/bookmarked"
+        app:graphPackage="com.moviedb.bookmarked"
+        app:graphResName="navigation"
+        app:moduleName="bookmarked" />
+
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.moviedb.settings.SettingsFragment" />
+
+</navigation>

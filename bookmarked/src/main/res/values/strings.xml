@@ -1,0 +1,18 @@
+<resources>
+    <string name="title_bookmarked" translatable="false">bookmarked</string>
+    <string name="dialog_title">Choose Filter</string>
+    <string name="remove_bookmark_all">All Bookmark Removed</string>
+    <string name="remove_all">Remove All</string>
+    <string name="remove">REMOVE</string>
+    <string name="ok" translatable="false">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="remove_title">Are you sure removing all bookmarks ?</string>
+    <string name="no_data_all">No bookmarked\nTV Shows or Movies</string>
+    <string name="no_data_movie">No bookmarked\nMovies</string>
+    <string name="no_data_tv">No bookmarked\nTV Shows</string>
+    <string-array name="filter">
+        <item>All</item>
+        <item>Movies</item>
+        <item>TV Shows</item>
+    </string-array>
+</resources>

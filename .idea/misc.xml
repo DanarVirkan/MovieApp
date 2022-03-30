@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/MovieApp/app/src/main/res/drawable/bookmarked.xml" value="0.15989583333333332" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/MovieApp/app/src/main/res/drawable/bookmarks.xml" value="0.15989583333333332" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/MovieApp/app/src/main/res/drawable/trending.xml" value="0.15989583333333332" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/MovieApp/app/src/main/res/layout/activity_details.xml" value="0.2" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/MovieApp/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/MovieApp/app/src/main/res/layout/appbar_content.xml" value="0.264" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/MovieApp/app/src/main/res/layout/fragment_explore.xml" value="0.23137254901960785" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/MovieApp/app/src/main/res/layout/fragment_movie.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/MovieApp/app/src/main/res/layout/fragment_trending.xml" value="0.19932432432432431" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/MovieApp/app/src/main/res/layout/fragment_tv.xml" value="0.1" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/MovieApp/app/src/main/res/menu/details_menu.xml" value="0.14375" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/MovieApp/app/src/main/res/menu/nav.xml" value="0.14375" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/MovieApp/app/src/main/res/xml/root_preferences.xml" value="0.14375" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/MovieApp/core/src/main/res/drawable/star.xml" value="0.15989583333333332" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/MovieApp/core/src/main/res/layout/item_grid.xml" value="0.14375" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/MovieApp/core/src/main/res/layout/item_list.xml" value="0.27447916666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

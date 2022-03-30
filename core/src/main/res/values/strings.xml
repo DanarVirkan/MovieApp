@@ -1,0 +1,4 @@
+<resources>
+    <string name="poster" translatable="false">poster</string>
+    <string name="background" translatable="false">background</string>
+</resources>

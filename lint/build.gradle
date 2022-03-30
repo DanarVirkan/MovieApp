@@ -1,0 +1,26 @@
+plugins {
+    id 'java-library'
+    id 'kotlin'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+ext {
+    lintVersion = "27.1.1"
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.4.21"
+    implementation "com.android.tools.lint:lint-api:$lintVersion"
+    implementation "com.android.tools.lint:lint-checks:$lintVersion"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+}
+
+jar {
+    manifest {
+        attributes("Lint-Registry-v2": "com.moviedb.lint.MyIssueRegistry")
+    }
+}

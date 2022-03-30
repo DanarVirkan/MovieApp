@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dialog_title">Pilih Filter</string>
+    <string name="remove_bookmark_all">Semua Penanda Dihapus</string>
+    <string name="remove_all">Hapus Semua</string>
+    <string name="remove">HAPUS</string>
+    <string name="cancel">Batalkan</string>
+    <string name="remove_title">Apa anda yakin menghapus semua penanda ?</string>
+    <string name="no_data_all">Tidak ada\nAcara TV atau Film\nyang ditandai</string>
+    <string name="no_data_movie">Tidak ada Film yang ditandai</string>
+    <string name="no_data_tv">Tidak ada Acara TV\nyang ditandai</string>
+    <string-array name="filter">
+        <item>Semua</item>
+        <item>Film</item>
+        <item>Acara TV</item>
+    </string-array>
+</resources>
