@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">MovieDB</string>
+    <string name="app_name" translatable="false">MovieApp</string>
     <string name="net_err">A Network Error Occurred</string>
     <string name="refresh">Refresh</string>
     <string name="overview" translatable="false">Overview</string>
