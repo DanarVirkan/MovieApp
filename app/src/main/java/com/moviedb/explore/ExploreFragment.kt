@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.moviedb.databinding.FragmentExploreBinding
+import kotlinx.coroutines.InternalCoroutinesApi
 
+@InternalCoroutinesApi
 class ExploreFragment : Fragment() {
     private var _binding: FragmentExploreBinding? = null
     val binding get() = _binding!!

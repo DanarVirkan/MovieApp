@@ -6,7 +6,7 @@ data class ItemResponse(
     @field:SerializedName("id")
     val id: Int,
     @field:SerializedName("poster_path")
-    val poster: String,
+    val poster: String?,
     @field:SerializedName("name")
     val name: String? = null,
     @field:SerializedName("title")

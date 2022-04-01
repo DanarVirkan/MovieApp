@@ -6,7 +6,7 @@ data class MovieResponse(
     @field:SerializedName("id")
     val id: Int,
     @field:SerializedName("poster_path")
-    val poster: String,
+    val poster: String?,
     @field:SerializedName("title")
     val title: String,
     @field:SerializedName("genres")

@@ -6,7 +6,7 @@ data class TVResponse(
     @field:SerializedName("id")
     val id: Int,
     @field:SerializedName("poster_path")
-    val poster: String,
+    val poster: String?,
     @field:SerializedName("name")
     val name: String,
     @field:SerializedName("first_air_date")

@@ -19,7 +19,7 @@ object DataMapper {
 
     fun mapResponseToMovie(input: MovieResponse): Movie = Movie(
         id = input.id,
-        poster = input.poster,
+        poster = input.poster ?: "none",
         title = input.title,
         genre = mapResponseToGenre(input.genre),
         vote = input.vote,
@@ -31,7 +31,7 @@ object DataMapper {
 
     fun mapResponseToTV(input: TVResponse): TV = TV(
         id = input.id,
-        poster = input.poster,
+        poster = input.poster ?: "none",
         name = input.name,
         air_date = input.air_date,
         genre = mapResponseToGenre(input.genre),
@@ -44,10 +44,11 @@ object DataMapper {
     fun mapResponseToDomain(input: List<ItemResponse>): List<Item> = input.map {
         Item(
             id = it.id,
-            poster = it.poster,
+            poster = it.poster ?: "none",
             name = it.name,
             title = it.title,
             vote = it.vote,
+            isBookmarked = false
         )
     }
 
@@ -55,7 +56,7 @@ object DataMapper {
         input.map {
             ItemEntity(
                 id = it.id,
-                poster = it.poster,
+                poster = it.poster ?: "none",
                 name = it.name,
                 title = it.title,
                 vote = it.vote

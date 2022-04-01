@@ -7,9 +7,11 @@ import androidx.lifecycle.viewModelScope
 import com.example.core.domain.Item
 import com.example.core.domain.UseCase
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
+@InternalCoroutinesApi
 class ExploreViewModel(private val useCase: UseCase) : ViewModel() {
     private val movieList = MutableLiveData<List<Item>>()
     private val tvList = MutableLiveData<List<Item>>()

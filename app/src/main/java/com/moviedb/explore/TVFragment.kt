@@ -8,9 +8,10 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.core.ui.TrendingAdapter
 import com.moviedb.databinding.FragmentTvBinding
+import kotlinx.coroutines.InternalCoroutinesApi
 import org.koin.android.viewmodel.ext.android.viewModel
 
-
+@InternalCoroutinesApi
 class TVFragment : Fragment() {
 
     private val viewModel: ExploreViewModel by viewModel()
