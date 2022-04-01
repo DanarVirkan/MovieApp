@@ -10,7 +10,7 @@ class LocalSource(
 
     suspend fun insertTrending(item: List<ItemEntity>) = dao.insertAll(item)
 
-    fun getBookmarked(type: Int): Flow<List<ItemEntity>> {
+    fun getBookmarked(type: Int): Flow<List<BookmarkedItem>> {
         return when (type) {
             0 -> dao.getAll()
             1 -> dao.getAllMovie()
@@ -18,9 +18,13 @@ class LocalSource(
         }
     }
 
-    fun updateBookmark(itemEntity: ItemEntity, newState: Boolean) {
-        itemEntity.isBookmarked = newState
-        dao.updateBookmark(itemEntity)
+    fun getBookmarkedById(id: Int): Boolean {
+        return dao.getBookmarkedById(id)
+    }
+
+    fun updateBookmark(bookmarkedItem: BookmarkedItem, newState: Boolean) {
+        bookmarkedItem.isBookmarked = newState
+        dao.addBookmark(bookmarkedItem)
     }
 
     fun removeAllBookmark() {

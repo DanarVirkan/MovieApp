@@ -9,5 +9,6 @@ data class Movie(
     val tagline: String,
     val overview: String,
     val release_date: String,
-    val runtime: Int
+    val runtime: Int,
+    val isBookmarked: Boolean
 )

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.os.PersistableBundle
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
@@ -76,7 +77,11 @@ class DetailsActivity : AppCompatActivity() {
                 if (it.tagline.isEmpty()) View.GONE else View.VISIBLE
             binding.detailOverview.text = it.overview
             binding.detailOverview.height = ViewGroup.LayoutParams.WRAP_CONTENT
+            booked = it.isBookmarked
             loaded = true
+            if (booked) {
+                binding.fabBookmark.setImageDrawable(resources.getDrawable(R.drawable.bookmarked))
+            }
         })
 
         viewModel.getTV().observe(this, {
@@ -98,13 +103,13 @@ class DetailsActivity : AppCompatActivity() {
                 resources.getQuantityString(R.plurals.season, it.season, it.season)
             binding.appbarContent.detailEpisode.text =
                 resources.getQuantityString(R.plurals.episode, it.episode, it.episode)
+            booked = it.isBookmarked
             loaded = true
+            if (booked) {
+                binding.fabBookmark.setImageDrawable(resources.getDrawable(R.drawable.bookmarked))
+            }
         })
 
-        if (itemDB.isBookmarked) {
-            binding.fabBookmark.setImageDrawable(resources.getDrawable(R.drawable.bookmarked))
-            booked = true
-        }
 
         binding.fabBookmark.setOnClickListener {
             if (loaded) {

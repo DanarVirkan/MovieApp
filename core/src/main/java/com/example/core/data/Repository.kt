@@ -18,11 +18,13 @@ class Repository(
 
     // REMOTE
     override fun getMovieById(id: Int) = remote.getMovieById(id).map {
-        DataMapper.mapResponseToMovie(it)
+        val isBookmarked = getBookmarkedById(id)
+        DataMapper.mapResponseToMovie(it, isBookmarked)
     }
 
     override fun getTVById(id: Int) = remote.getTVById(id).map {
-        DataMapper.mapResponseToTV(it)
+        val isBookmarked = getBookmarkedById(id)
+        DataMapper.mapResponseToTV(it, isBookmarked)
     }
 
     override fun getTrending(): Flow<Resource<List<Item>>> =
@@ -57,8 +59,12 @@ class Repository(
         local.getBookmarked(type).map { DataMapper.mapEntitiesToDomain(it) }
 
     override fun updateBookmark(item: Item, newState: Boolean) {
-        val converter = DataMapper.mapDomainToEntity(item)
+        val converter = DataMapper.mapDomainToBookmarkedItem(item)
         local.updateBookmark(converter, newState)
+    }
+
+    private fun getBookmarkedById(id: Int): Boolean {
+        return local.getBookmarkedById(id)
     }
 
     override fun removeAllBookmark() = local.removeAllBookmark()

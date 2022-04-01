@@ -9,5 +9,6 @@ data class TV(
     val episode: Int,
     val season: Int,
     val vote: String,
-    val overview: String
+    val overview: String,
+    val isBookmarked: Boolean
 )

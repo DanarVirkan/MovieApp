@@ -1,5 +1,7 @@
 package com.example.core.utils
 
+import com.example.core.data.local.BookmarkedItem
+import com.example.core.data.local.ItemDB
 import com.example.core.data.local.ItemEntity
 import com.example.core.data.remote.response.GenreResponse
 import com.example.core.data.remote.response.ItemResponse
@@ -17,7 +19,7 @@ object DataMapper {
         )
     }
 
-    fun mapResponseToMovie(input: MovieResponse): Movie = Movie(
+    fun mapResponseToMovie(input: MovieResponse, isBookmarked: Boolean): Movie = Movie(
         id = input.id,
         poster = input.poster ?: "none",
         title = input.title,
@@ -26,10 +28,11 @@ object DataMapper {
         tagline = input.tagline,
         overview = input.overview,
         release_date = input.release_date,
-        runtime = input.runtime
+        runtime = input.runtime,
+        isBookmarked = isBookmarked
     )
 
-    fun mapResponseToTV(input: TVResponse): TV = TV(
+    fun mapResponseToTV(input: TVResponse, isBookmarked: Boolean): TV = TV(
         id = input.id,
         poster = input.poster ?: "none",
         name = input.name,
@@ -38,7 +41,8 @@ object DataMapper {
         episode = input.episode,
         season = input.season,
         vote = input.vote,
-        overview = input.overview
+        overview = input.overview,
+        isBookmarked = isBookmarked
     )
 
     fun mapResponseToDomain(input: List<ItemResponse>): List<Item> = input.map {
@@ -48,7 +52,6 @@ object DataMapper {
             name = it.name,
             title = it.title,
             vote = it.vote,
-            isBookmarked = false
         )
     }
 
@@ -63,23 +66,19 @@ object DataMapper {
             )
         }
 
-    fun mapEntitiesToDomain(input: List<ItemEntity>): List<Item> =
+    fun mapEntitiesToDomain(input: List<ItemDB>): List<Item> =
         input.map {
             Item(
-                idGenerate = it.idGenerate,
                 id = it.id,
                 poster = it.poster,
                 name = it.name,
                 title = it.title,
                 vote = it.vote,
-                isBookmarked = it.isBookmarked
-
             )
         }
 
-    fun mapDomainToEntity(input: Item): ItemEntity =
-        ItemEntity(
-            idGenerate = input.idGenerate,
+    fun mapDomainToBookmarkedItem(input: Item): BookmarkedItem =
+        BookmarkedItem(
             id = input.id,
             poster = input.poster,
             name = input.name,
